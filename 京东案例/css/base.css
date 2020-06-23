@@ -1,0 +1,520 @@
+/* 版心 */
+.w {
+    width: 1190px;
+    margin: auto;
+}
+
+.fl {
+    float: left;
+}
+
+.fr {
+    float: right;
+}
+
+.style-red {
+    color: #f10215 !important;
+}
+
+.clearfix::before,
+.clearfix::after {
+    content: "";
+    display: table;
+}
+
+.clearfix::after {
+    clear: both;
+}
+
+.clearfix {
+    *zoom: 1;
+}
+
+/*声明字体  引用字体*/
+@font-face {
+    /*我们自己起名字可以*/
+    font-family: "icomoon";
+    src: url('../fonts/icomoon.eot?7kkyc2');
+    src: url('../fonts/icomoon.eot?7kkyc2#iefix') format('embedded-opentype'),
+        url('../fonts/icomoon.ttf?7kkyc2') format('truetype'),
+        url('../fonts/icomoon.woff?7kkyc2') format('woff'),
+        url('../fonts/icomoon.svg?7kkyc2#icomoon') format('svg');
+    /*倾斜字体正常*/
+    font-style: normal;
+}
+
+* {
+    margin: 0;
+    padding: 0;
+}
+
+/* 去除图片 底侧缝隙（图片和文字的基线对齐） */
+img {
+    vertical-align: top;
+}
+
+li {
+    list-style: none;
+}
+
+a {
+    text-decoration: none;
+}
+
+body {
+    background-color: #f6f6f6;
+}
+
+/* 京东顶部start */
+.J_event {
+    height: 80px;
+    background-color: #000;
+}
+
+.J_event a {
+    display: block;
+    height: 80px;
+    background: url(../images/top.jpg) no-repeat;
+    position: relative;
+}
+
+.J_event a i {
+    width: 20px;
+    height: 20px;
+    position: absolute;
+    top: 5px;
+    right: 5px;
+    font-family: "icomoon";
+    font-style: normal;
+    color: gray;
+    text-align: center;
+    line-height: 20px;
+}
+
+/* 京东顶部end */
+
+/* 快捷导航制作开始 */
+.shortcut {
+    height: 30px;
+    background-color: #E3E4E5;
+    border-bottom: 1px solid #dddddd;
+    color: #9d9d9d;
+    font-size: 12px;
+    line-height: 30px;
+}
+
+.shortcut a {
+    color: #9d9d9d;
+    font-size: 12px;
+    text-decoration: none;
+}
+
+.shortcut a:hover {
+    color: #c81623
+}
+
+.pos {
+    font-family: "icomoon";
+    font-style: normal;
+    color: #f10215;
+}
+
+.shortcut .fl li {
+    margin-left: 200px;
+    height: 30px;
+}
+
+.shortcut .fr li {
+    float: left;
+}
+
+/* 设计快捷导航栏竖线的一种小技巧 */
+.spacer {
+    width: 1px;
+    height: 10px;
+    background-color: #ccc;
+    margin: 10px 10px 0;
+}
+
+.dropdown {
+    padding-right: 15px;
+    position: relative;
+}
+
+.dropdown i {
+    font-family: "icomoon";
+    font-style: normal;
+    font-size: 16px;
+    position: absolute;
+    top: -3px;
+    right: -2px;
+
+}
+
+.erweima {
+    width: 60px;
+    height: 60px;
+    border: 1px solid #ccc;
+    padding: 3px;
+    position: absolute;
+    top: 35px;
+    left: -8px;
+}
+
+/* 快捷导航制作结束 */
+
+/* header start */
+.header {
+    height: 140px;
+}
+
+.inner {
+    height: 140px;
+    /* 子绝父相 */
+    position: relative;
+}
+
+.logo {
+    width: 190px;
+    height: 170px;
+    position: absolute;
+    top: -30px;
+    left: 0;
+    box-shadow: 0 -12px 10px rgba(0, 0, 0, 0.2);
+}
+
+.logo h1 {
+    margin: 0;
+}
+
+.logo h1 a {
+    display: block;
+    width: 190px;
+    height: 170px;
+    background: url(../images/logo.jpg) no-repeat;
+    /* 用首行缩进的方法让京东这个字体移出a盒子，再用overflow:hidden;隐藏掉超出的部分，
+    这样就可以让字体消失*/
+    text-indent: -999px;
+    overflow: hidden;
+}
+
+.search {
+    width: 550px;
+    height: 35px;
+    background-color: purple;
+    position: absolute;
+    top: 25px;
+    left: 320px;
+}
+
+.search input {
+    width: 493px;
+    height: 33px;
+    border: 1px solid #B22D00;
+    /* 取消内边距 */
+    padding: 0 0 0 5px;
+    /* 取消轮廓 */
+    outline: 0;
+    color: #989898;
+    /* 浮动为了取消两个行内块元素间的间隙 */
+    float: left;
+}
+
+.search button {
+    width: 50px;
+    height: 35px;
+    border: none;
+    /* 浮动为了取消两个行内块元素间的间隙 */
+    float: left;
+    background-color: #f10215;
+    cursor: pointer;
+    outline: none;
+}
+
+.search button i {
+    font-family: "icomoon";
+    font-style: normal;
+    color: #fff;
+}
+
+/* 用了精灵图 */
+.search em {
+    position: absolute;
+    top: 10px;
+    right: 65px;
+    width: 19px;
+    height: 15px;
+    cursor: pointer;
+    background: url(../images/sprite-search.png);
+}
+
+.search em:hover {
+    background-position: -30px 0;
+}
+
+.hotwords {
+    position: absolute;
+    left: 320px;
+    top: 70px;
+}
+
+.hotwords a {
+    color: #9e9b99;
+    text-decoration: none;
+    font-size: 12px;
+}
+
+.hotwords a:hover {
+    color: #f10215;
+}
+
+.car {
+    width: 188px;
+    height: 33px;
+    position: absolute;
+    top: 25px;
+    right: 100px;
+    border: 1px solid #ccc;
+    text-align: center;
+    line-height: 33px;
+}
+
+.car i {
+    font-family: "icomoon";
+    font-style: normal;
+    color: #f10215;
+}
+
+.car a {
+    font-size: 12px;
+    color: #f10215;
+    text-decoration: none;
+}
+
+.car em {
+    position: absolute;
+    top: 5px;
+    /* 左对齐而不是右对齐是防止购物车数量多了，该盒子会向左撑开盒子把a标签的字体盖住，所以一
+    定要左对齐，而不是右对齐 */
+    left: 140px;
+    height: 16px;
+    font-style: normal;
+    background-color: #f10215;
+    border-radius: 7px;
+    line-height: 16px;
+    color: #fff;
+    font-size: 12px;
+    padding: 0 3px;
+}
+
+.computer {
+    position: absolute;
+    right: 0;
+    bottom: 10px;
+}
+
+.computer a {
+    display: block;
+    text-decoration: none;
+}
+
+.navitems {
+    position: absolute;
+    left: 200px;
+    bottom: 0;
+}
+
+.navitems ul {
+    float: left;
+}
+
+.navitems ul li {
+    float: left;
+    margin-left: 30px;
+}
+
+.navitems a {
+    display: block;
+    font-size: 16px;
+    color: #555A5F;
+    font-weight: 700;
+    line-height: 40px;
+    text-decoration: none;
+}
+
+.navitems a:hover {
+    color: #f10215;
+}
+
+.navitems .spacer {
+    float: left;
+    margin-top: 15px;
+    margin-left: 20px;
+    margin-right: -10px;
+}
+
+/* header end */
+
+/* footer start */
+.footer {
+    height: 560px;
+    background-color: #eaeaea;
+}
+
+.footer-service {
+    border-bottom: 1px solid #dedede;
+    padding: 30px 0;
+}
+
+.f-s-inner li {
+    float: left;
+    width: 297px;
+    height: 42px;
+}
+
+.service-unit {
+    width: 225px;
+    height: 42px;
+    margin: 0 auto;
+    position: relative;
+}
+
+.service-unit h5 {
+    width: 36px;
+    height: 43px;
+    position: absolute;
+    top: 0;
+    left: 0;
+    background: url(../images/ico_service.png) no-repeat;
+    text-indent: -999px;
+}
+
+.service-unit p {
+    line-height: 42px;
+    margin-left: 45px;
+    font-size: 18px;
+    font-weight: 700;
+}
+
+.service-unit .kuai {
+    background-position: 0 -42px;
+}
+
+.service-unit .hao {
+    background-position: 0 -86px;
+}
+
+.service-unit .sheng {
+    background-position: 0 -128px;
+}
+
+.help {
+    height: 200px;
+    margin: 20px auto;
+}
+
+.help dl {
+    float: left;
+}
+
+.help dt {
+    font-size: 14px;
+    font-weight: 700;
+    color: #666;
+    height: 30px;
+    width: 195px;
+}
+
+.help dd {
+    height: 22px;
+    width: 195px;
+}
+
+.help dd a {
+    color: #727272;
+    font-size: 12px;
+    text-decoration: none;
+}
+
+.help dd a:hover {
+    color: #f10215;
+}
+
+.help .cover {
+    float: right;
+    width: 207px;
+    height: 150px;
+    background: url(../images/ico_footer.png) no-repeat;
+}
+
+.cover dt {
+    text-align: center;
+}
+
+.help .info {
+    width: 175px;
+    height: 50px;
+    color: #727272;
+    font-size: 12px;
+    margin-top: 5px;
+    margin-left: 10px;
+    line-height: 18px;
+}
+
+.help .more {
+    text-align: right;
+}
+
+.copyright {
+    border-top: 1px solid #ccc;
+    padding-top: 15px;
+}
+
+.links {
+    text-align: center;
+}
+
+.links a {
+    color: #727272;
+    font-size: 12px;
+    text-decoration: none;
+}
+
+.links span {
+    font-size: 12px;
+    color: #d4cdcd;
+    margin: 0 6px;
+}
+
+.c-info {
+    font-size: 12px;
+    color: #9e9e9b;
+    text-align: center;
+    line-height: 20px;
+    margin-top: 10px;
+}
+
+.c-info span {
+    font-size: 12px;
+    color: #9e9e9b;
+    margin: 0 6px;
+
+}
+
+.tupian {
+    margin-top: 10px;
+    text-align: center;
+}
+
+.tupian a {
+    display: inline-block;
+    width: 103px;
+    height: 32px;
+    background: url(../images/ico_footer.png) no-repeat 0 -151px;
+}
+
+.tupian .kexin {
+    background-position: -104px -151px;
+}
+
+/* footer end */
